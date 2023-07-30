@@ -44,7 +44,10 @@ pub fn foo_if_fizz(fizzish: &str) -> &str {
 // Determine if a given year is a leap year
 // Implement logic
 fn is_leap_year(year: i32) -> bool {
-    (year%4==0) && ( year%100!=0) || (year%400==0)
+    if (year%4==0) && ( year%100!=0) || (year%400==0) {
+        return true;
+    }
+    false
 }
 
 // Exercise 5
